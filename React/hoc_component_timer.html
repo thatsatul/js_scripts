@@ -1,0 +1,80 @@
+<style>
+body {
+  background: #20262E;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+li {
+  margin: 8px 0;
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+</style>
+
+<div id="app"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+
+<script type='text/babel'>
+class BaseComponent extends React.Component {
+	render() {
+		const {num} = this.props;
+		console.log('**** NUM *****', num);
+		return (
+			<div>
+				<h2>BaseComponent</h2>
+				<div>{num}</div>
+			</div>
+		);
+	}
+}
+
+const HocComponent = (PassedComponent) => {
+	class HOC extends React.Component {
+		constructor(props) {
+			super(props);
+			this.state = {
+				count: 1,
+			};
+		}
+		componentDidMount() {
+			let inv = setInterval(() => {
+			console.log(1111);
+				const {count} = this.state;
+				const {max} = this.props;
+				if(count > max-1) {
+					clearInterval(inv);
+					return;
+				} else {
+					this.setState({
+						count: this.state.count + 1,
+					});
+				}
+			}, 1000);
+		}
+		render() {
+			const {count} = this.state;
+			console.log('****** Count ******', count);
+			return <PassedComponent num={count} />
+		}
+	}
+	
+	return <HOC max={10} />;
+	
+}
+
+ReactDOM.render(HocComponent(BaseComponent), document.querySelector("#app"))
+
+</script>

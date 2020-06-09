@@ -1,0 +1,25 @@
+How will you design a project?
+
+1. Understand exact requirement, timeline, business value.
+2. Think about the challenges, approach and estimates.
+
+3. Challenges - 
+  a) Figure out complexity of the app.
+  b) Is it serving big loads like images and videos?
+  c) What would be the total and concurrent users accessing app?
+  d) How are we gonna deal with huge data exchanges and how we can minimize that?
+  e) How would we manage user authentication?
+
+4. Approach - Decide and implement following factors:
+  a. What will be the best tech stack and implement intial technical setup.
+  b. Which environments to be supported - Dev, prod, qa, etc?
+  c. How are we going to implement and maintain user authentication and validation across app?
+  d. How will we implement application architecture and state management?
+  e. How are we getting data and consuming it in app? (Do we need adapters)
+  f. What would be database architecture?
+  g. Is app going to be monolithic or micro services based?
+  h. How are we implementing state management?
+  i. Error handling across app.
+  j. How are we going to deploy the app? (Docker, Qubernetes)
+  k. Do we need to add load balancers?
+  
