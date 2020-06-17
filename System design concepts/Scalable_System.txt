@@ -1,0 +1,8 @@
+HOW TO CREATE A SCALABLE SYSTEM?
+// https://dzone.com/articles/scalable-system-design-0
+
+* Use of load-balancer
+* Caching at client side and server side.
+* Database designing in such a way that it can be expanded horizontally.
+* Implementing Micro-services
+* Segregate database schema based on usage and requirement.
