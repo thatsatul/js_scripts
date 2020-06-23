@@ -6,3 +6,5 @@ HOW TO CREATE A SCALABLE SYSTEM?
 * Database designing in such a way that it can be expanded horizontally.
 * Implementing Micro-services
 * Segregate database schema based on usage and requirement.
+* Understand the priority and what can be compromised.
+* Try to do more processing upstream (where data get generated) than downstream because it reduce the amount of data being propagated

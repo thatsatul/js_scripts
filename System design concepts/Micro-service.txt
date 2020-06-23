@@ -1,1 +1,35 @@
 # https://smartbear.com/solutions/microservices/
+
+** Characterisitcs of microservices :
+
+1) Multiple Components
+2) Built For Business
+3) Simple Routing
+4) Decentralized
+5) Failure Resistant
+6) Evolutionary
+
+** Pros
+
+- Microservice architecture gives developers the freedom to independently develop and deploy services
+- A microservice can be developed by a fairly small team
+- Code for different services can be written in different languages (though many practitioners discourage it)
+- Easy integration and automatic deployment (using open-source continuous integration tools such as Jenkins, Hudson, etc.)
+- Easy to understand and modify for developers, thus can help a new team member become productive quickly
+- The developers can make use of the latest technologies
+- The code is organized around business capabilities
+- Starts the web container more quickly, so the deployment is also faster
+- When change is required in a certain part of the application, only the related service can be modified and redeployed—no need to modify and redeploy the entire application
+- Better fault isolation: if one microservice fails, the other will continue to work (although one problematic area of a monolith application can jeopardize the entire system)
+- Easy to scale and integrate with third-party services
+- No long-term commitment to technology stack
+
+** Cons
+- Due to distributed deployment, testing can become complicated and tedious
+- Increasing number of services can result in information barriers
+- The architecture brings additional complexity as the developers have to mitigate fault tolerance, network latency, and deal with a variety of message formats as well as load balancing
+- Being a distributed system, it can result in duplication of effort
+- When number of services increases, integration and managing whole products can become complicated
+- In addition to several complexities of monolithic architecture, the developers have to deal with the additional complexity of a distributed system
+- Developers have to put additional effort into implementing the mechanism of communication between the services
+- Handling use cases that span more than one service without using distributed transactions is not only tough but also requires communication and cooperation between different teams

@@ -1,15 +1,18 @@
+<script>
+// Object only has __proto__ and no prototype
 var obj1 = {
   a: 1,
 };
 
 var obj2 = Object.create(obj1);
 console.log('****** var obj2 = Object.create(obj1); obj2, obj1, obj2.a', obj2, obj1, obj2.a);
-console.log('****** obj2.prototype ********', obj2.__proto__);
+console.log('****** obj2.__proto__ ********', obj2.__proto__);
 
 var obj3 = Object.create(obj2);
 console.log('****** var obj3 = Object.create(obj2); obj3, obj2, obj3.a', obj3, obj2, obj3.a);
-console.log('****** obj2.prototype, obj3.prototype ********', obj2.__proto__, obj3.__proto__);
+console.log('****** obj2.__proto__, obj3.__proto__ ********', obj2.__proto__, obj3.__proto__);
 
+// Array, String, Object - all are instance of Object()
 console.log('******* Array.proto ********', Array.__proto__);
 console.log('******* Array.proto ********', Object.__proto__);
 console.log('******* String.proto ********', String.__proto__);
@@ -30,10 +33,13 @@ if(!String.prototype.rep) {
 }
 
 var color1 = new String("green");
-console.log('******* x instanceof String *****', color1 instanceof String);
-console.log('******* x.length, x.repeat *****', color1.length, color1.rep());
+var color2 = "red";
+console.log('******* color1 instanceof String *****', color1 instanceof String);
+console.log('******* color1.length, color1.repeat *****', color1.length, color1.rep());
+console.log('******* color2.length, color2.repeat *****', color2.length, color2.rep());
+console.log('******* color1, color2, color1.__proto__, color2.__proto__ *****', color1, color2, color1.__proto__, color2.__proto__);
 
-// Prototype usage in case of instance
+// function has both __proto__ and prototype
 function Test( key ) {
   this.key = key;
 }
@@ -42,10 +48,7 @@ Test.prototype.fn = function () {
   return 'pqr';
 }
 
-// prototype only works with function  and not __proto__
-// Test.__proto__.fnO = function () {
-//   return 'mnp';
-// }
-
-var ins = new Test('aaa');
-console.log('******* ins.key, ins.fn() ******', ins.key, ins.fn());
+// While creating an instance - inst.__proto__ = Test.prototype
+var inst = new Test('aaa');
+console.log('******* inst.key, inst.fn() ******', inst.key, inst.fn());
+</script>

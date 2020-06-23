@@ -53,3 +53,5 @@ heroku plugins:install heroku-repo
 heroku repo:purge_cache -a sapient-git
 
 heroku restart --app sapient-git
+
+heroku run bash --app sapient-g

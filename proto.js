@@ -3,28 +3,28 @@
 const obj1 = {
   a: 1
 };
-console.log('**** obj1.prototype ****', obj1.prototype);
-console.log('**** obj1.__proto__ ****', obj1.__proto__);
+console.log('**** obj1.prototype ****', obj1.prototype); // undefined
+console.log('**** obj1.__proto__ ****', obj1.__proto__); // {}
 
-function fun() {
+function Fun() {
   this.b = 1;
 }
+Fun.prototype.c = 2;
+console.log('**** fun.prototype ****', Fun.prototype); // fun {}
+console.log('**** fun.__proto__ ****', Fun.__proto__); // function () { [native code] }
 
-var funInst = new fun();
-console.log('**** fun.prototype ****', fun.prototype);
-console.log('**** fun.__proto__ ****', fun.__proto__);
-console.log('**** funInst.prototype ****', funInst.prototype);
-console.log('**** funInst.__proto__ ****', funInst.__proto__);
 
-// Understanding [[Prototype]]
-var proto = {
-  describe: function () {
-    return 'name: '+ this.name;
-  }
-};
-var obj = {
-  __proto__: proto,
-  name: 'obj'
-};
-obj.describe // [Function]
-obj.describe() // 'name: obj'
+// funInst.__proto__ = Fun.prototype at time of creation
+// Fun.prototype is different from  Fun.__proto__
+
+var funInst = new Fun();
+console.log('**** funInst.prototype ****', funInst.prototype); // undefined
+console.log('**** funInst.__proto__ ****', funInst.__proto__); // fun {}
+
+var str = 'Abc';
+console.log('**** str.prototype ****', str.prototype); // undefined
+console.log('**** str.__proto__ ****', str.__proto__); // [String: '']
+
+var bool = true;
+console.log('**** bool.prototype ****', bool.prototype); // undefined
+console.log('**** bool.__proto__ ****', bool.__proto__); // [Boolean: false]
