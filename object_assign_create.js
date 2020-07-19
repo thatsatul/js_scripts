@@ -26,10 +26,10 @@ const target2 = {
 };
 
 const assignedObject = Object.assign({}, source, target1);
-console.log('*****  source, Target1  *****', source, target1);
-console.log('*****  AssignedObject  ******', assignedObject, assignedObject.deep.x);
+console.log('*****  source, target1  *****', source, target1);
+console.log('*****  assignedObject and assignedObject.deep.z  ******', assignedObject, assignedObject.deep.z);
 // *****  Target1  ***** { b: 1, c: 2, deep: { x: 6, y: 7 } }
-// *****  AssignedObject  ****** { b: 1, c: 2, deep: { x: 6, y: 7 } } and 6
+// *****  AssignedObject  ****** { a: 4, b: 1, deep: { x: 6, y: 7 }, c: 2 } and 6
 
 const createdObject = Object.create(target2);
 console.log('*****  Target2  *****', target2);

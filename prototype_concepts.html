@@ -34,9 +34,9 @@ if(!String.prototype.rep) {
 
 var color1 = new String("green");
 var color2 = "red";
-console.log('******* color1 instanceof String *****', color1 instanceof String);
-console.log('******* color1.length, color1.repeat *****', color1.length, color1.rep());
-console.log('******* color2.length, color2.repeat *****', color2.length, color2.rep());
+console.log('******* color1 instanceof String *****', color1 instanceof String); // true
+console.log('******* color1.length, color1.repeat *****', color1.length, color1.rep()); // 5 greenREPgreen
+console.log('******* color2.length, color2.repeat *****', color2.length, color2.rep()); // 3 redREPred
 console.log('******* color1, color2, color1.__proto__, color2.__proto__ *****', color1, color2, color1.__proto__, color2.__proto__);
 
 // function has both __proto__ and prototype

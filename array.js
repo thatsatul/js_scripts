@@ -103,7 +103,7 @@ var numbers = [1,2,3,4,5,4,3,2,1];
 var everyResult = numbers.every(function(item, index, array){
   return (item > 2);
 });
-console.log('******** every(): returns false is any item <= 2 *********', numbers, everyResult); // false
+console.log('******** every(): returns false if any item <= 2 *********', numbers, everyResult); // false
 var someResult = numbers.some(function(item, index, array){
   return (item > 2);
 });

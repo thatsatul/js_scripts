@@ -8,3 +8,4 @@ HOW TO CREATE A SCALABLE SYSTEM?
 * Segregate database schema based on usage and requirement.
 * Understand the priority and what can be compromised.
 * Try to do more processing upstream (where data get generated) than downstream because it reduce the amount of data being propagated
+* Use load-balancers for heavy incoming traffic

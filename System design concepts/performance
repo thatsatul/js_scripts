@@ -1,0 +1,20 @@
+How to improve performance of the application?
+
+Front-end
+1. Minification of CSS and JS files
+2. Lazy-loading of modules
+3. Resize images according to platform
+4. Less number of http requests
+5. Avoid render blocking css
+6. Use async and defer JS
+7. Apply pagination for large data.
+8. Caching of non-changing data
+9. Bring data dynamically as we progress in page (eg. lazy load images on scrolling )
+10. Decrease the size of http request and response.
+11. Preconnect client to api server for establishing handshake
+12. Handle errors properly (http errors, data errors, navigation errors)
+
+Back-end:
+1. Caching ( redis, memcache )
+2. Try to lessen the query count to DB as performing repeated db connections add latency
+3. Handle errors properly

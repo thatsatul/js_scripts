@@ -4,8 +4,6 @@
 Docker commands:
 docker tag 7b2bca7dfc8b atul1anand/sapient:v1 // 7b2bca7dfc8b = imageId
 
-docker run -p 8080:8080 sapient .
-
 docker ps
 
 docker images
@@ -25,7 +23,7 @@ heroku container:login
 
 heroku create // cryptic-citadel-91205
 
-docker build -t sapient . // Dont forget .
+docker build -t registry.heroku.com/cryptic-citadel-91205/web . // Dont forget .
 
 Acids-Macbook:react-ssr-basic atulanand$ docker images
 REPOSITORY                                               TAG                 IMAGE ID            CREATED             SIZE
@@ -36,10 +34,13 @@ nginx                                                    latest              262
 node                                                     10                  e7671d9424c2        3 days ago          911MB
 Acids-Macbook:react-ssr-basic atulanand$ 
 
-docker tag 7b2bca7dfc8b registry.heroku.com/cryptic-citadel-91205/web
+docker run -p 8080:3000 registry.heroku.com/cryptic-citadel-91205
+
 docker push registry.heroku.com/cryptic-citadel-91205/web
 
 heroku container:release web
+
+docker tag 7b2bca7dfc8b registry.heroku.com/cryptic-citadel-91205/web
 
 Go to app
 

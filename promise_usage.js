@@ -32,9 +32,14 @@ var pmInstance = new Promise((resolve, reject) => {
 });
 
 pmInstance
-  .then(() => {
-    console.log('***** This will appear after call of xhr2 completed successfully *****');
-  })
+  .then(
+    () => {
+      console.log('***** Promise done with success *****');
+    },
+    () => {
+      console.log('***** Promise done with error *****');
+    }
+  )
   .catch(() => {
-    console.log('***** This will appear after call of xhr2 completed with an error *****');
+    console.log('***** Promise failed with error *****');
   });

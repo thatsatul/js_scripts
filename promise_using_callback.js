@@ -1,4 +1,4 @@
-// This is a common interview question where you can create anpromise like effect using callback. But this is not how actual promise works. To see how actual promise works, refer to : https://www.freecodecamp.org/news/how-javascript-promises-actually-work-from-the-inside-out-76698bb7210b/
+// This is a common interview question where you can create a promise like effect using callback. But this is not how actual promise works. To see how actual promise works, refer to : https://www.freecodecamp.org/news/how-javascript-promises-actually-work-from-the-inside-out-76698bb7210b/
 
 // const request = require('request');
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
