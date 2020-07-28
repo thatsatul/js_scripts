@@ -1,0 +1,20 @@
+create_parking_lot 6
+create_parking_lot 10
+park KA-01-HH-1234
+
+park 
+park 01-BB-3333
+park KA-HH-7777
+park KA-01-2701
+park KA-01-HH-
+leave KA-01-HH-3141 -4
+status
+park KA-01-P-333
+park DL-12-AA-9999
+leave KA-01-HH 4
+leave KA-000 6
+leave 12-AA-9999 2
+dont-park KA-09-HH-0987
+park CA-09-IO-1111
+park KA-09-HH-0123
+status

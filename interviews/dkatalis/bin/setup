@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Add script to:
+# * Install dependencies
+# * Build/Compile
+# * Run Test Suit to validate
+#
+# After this is run, bin/parking_lot
+# should Just Work.
+
+
+# This variable contains absolute path of this `parking_lot` script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+npm install
+
+echo '******* Running all custom test suites ( Added new in assignment ) ********'
+npm run test
+
+echo '******* Running functional test suite ( Predefined in assignment ) ********'
+./bin/run_functional_tests
