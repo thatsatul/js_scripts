@@ -18,3 +18,8 @@ Back-end:
 1. Caching ( redis, memcache )
 2. Try to lessen the query count to DB as performing repeated db connections add latency
 3. Handle errors properly
+
+Database:
+1. Load-balancing of servers for handling large number of server requests
+2. Partitioning of database with similar data together
+3. Using indexing in DB
