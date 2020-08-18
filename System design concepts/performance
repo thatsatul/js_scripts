@@ -13,13 +13,17 @@ Front-end
 10. Decrease the size of http request and response.
 11. Preconnect client to api server for establishing handshake
 12. Handle errors properly (http errors, data errors, navigation errors)
+13. Separate api calls based on different sections in UI. So that later get loaded parallely.
+14. Implement chunking
 
 Back-end:
 1. Caching ( redis, memcache )
 2. Try to lessen the query count to DB as performing repeated db connections add latency
 3. Handle errors properly
+4. Optimize the query.
+5. Load-balancing of servers for handling large number of server requests
 
 Database:
-1. Load-balancing of servers for handling large number of server requests
-2. Partitioning of database with similar data together
-3. Using indexing in DB
+
+1. Partitioning of database with similar data together
+2. Using indexing in DB

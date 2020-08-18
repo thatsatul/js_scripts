@@ -1,0 +1,47 @@
+<style>
+</style>
+  
+<div id="app"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+
+<script type='text/babel'>
+  class App extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        val: ''
+      };
+    }
+
+    inv = null;
+
+    end = () => {
+      clearInterval(this.inv);
+    }
+
+    start = () => {
+      const uId = '*abcdefghijklmnopqrstuvwxyz*';
+      this.inv = setInterval(() => {
+        const { val } = this.state;
+        this.setState({
+          val: val + uId
+        });
+      }, 20);
+    }
+
+    render () {
+      const { val } = this.state;
+      return (
+        <div>
+          <button onClick={() => this.start()}>Start</button>
+          <button onClick={() => this.end()}>Stop</button>
+          <div style={{wordBreak: 'break-all'}}>{val}</div>
+        </div>
+      );
+    }
+  }
+  
+  ReactDOM.render(<App />, document.querySelector("#app"))
+</script>
